@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+>
+
+  <Button
+      android:id="@+id/drawable_layout_btn"
+      android:layout_alignParentBottom="true"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="back"
+      android:textSize="13sp"
+      android:textColor="@android:color/white"
+      android:background="@drawable/primary_button_background_selector"
+  />
+
+  <ImageView
+      android:id="@+id/drawable_layout_iv"
+      android:layout_above="@id/drawable_layout_btn"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+  />
+
+</RelativeLayout>

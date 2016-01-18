@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="SmartDrawingView">
+    <attr name="smart_finger_color" format="color|reference"/>
+    <attr name="smart_stroke_width" format="dimension|reference"/>
+  </declare-styleable>
+
+  <attr name="SmartDrawingViewStyle" format="reference"/>
+
+</resources>

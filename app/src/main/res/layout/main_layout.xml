@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Joker.smartdrawing.MainActivity">
+
+  <include
+      layout="@layout/include_toolbar_layout"/>
+
+  <RelativeLayout
+      android:layout_marginTop="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/corner_background"
+  >
+
+    <Button
+        android:id="@+id/main_layout_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:clickable="true"
+        android:text="Hello World!"
+        android:background="@drawable/button_background_selector"
+    />
+
+    <com.Joker.smartdrawing.view.SmartTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="24sp"
+        android:shadowDy="10"
+        android:shadowRadius="4"
+        android:shadowColor="@android:color/holo_orange_light"
+        android:textColor="@android:color/holo_blue_bright"
+        android:text="@string/smartDengg"
+    />
+  </RelativeLayout>
+
+
+</FrameLayout>

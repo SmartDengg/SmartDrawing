@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.Joker.smartdrawing.DrawingActivity">
+
+  <include layout="@layout/include_toolbar_layout"/>
+
+  <com.Joker.smartdrawing.view.SmartDrawingView
+      android:id="@+id/drawing_layout_smart_view"
+      android:layout_marginTop="?attr/actionBarSize"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@drawable/corner_background"
+  />
+
+</FrameLayout>

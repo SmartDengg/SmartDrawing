@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    android:background="@drawable/primary_button_background_pressed"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+>
+
+  <com.Joker.smartdrawing.view.SmartTextView
+      android:id="@+id/toolbar_layout_title_tv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:textColor="@android:color/white"
+      android:textSize="18sp"
+      android:visibility="visible"
+      android:text="@string/app_name"
+  />
+
+</android.support.v7.widget.Toolbar>

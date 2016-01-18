@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#3F51B5</color>
+  <color name="colorPrimaryDark">#303F9F</color>
+  <color name="colorAccent">#FF4081</color>
+
+  <color name="design_red">#AADA498C</color>
+  <color name="design_dray">#40ffffff</color>
+  <color name="design_azure">#F0FFFF</color>
+  <color name="design_honeydew">#F0FFF0</color>
+
+</resources>

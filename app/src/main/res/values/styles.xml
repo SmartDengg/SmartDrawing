@@ -1,0 +1,30 @@
+<resources>
+
+  <!-- Base application theme. -->
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="AppTheme.SplashStyle">
+    <item name="android:windowBackground">@color/colorPrimary</item>
+  </style>
+
+  <style name="AppTheme.DrawingStyle">
+    <item name="SmartDrawingViewStyle">@style/SmartViewStyle</item>
+  </style>
+
+  <style name="SmartViewStyle">
+    <item name="smart_finger_color">@android:color/holo_orange_light</item>
+    <item name="smart_stroke_width">@dimen/material_4dp</item>
+  </style>
+
+  <!--Default Style-->
+  <style name="DefaultSmartViewStyle">
+    <item name="smart_finger_color">@color/colorPrimary</item>
+    <item name="smart_stroke_width">@dimen/material_2dp</item>
+  </style>
+
+</resources>

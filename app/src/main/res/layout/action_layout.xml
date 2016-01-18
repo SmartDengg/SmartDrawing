@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.AppCompatImageButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_inbox_ib"
+    android:layout_width="?attr/actionBarSize"
+    android:layout_height="?attr/actionBarSize"
+    android:scaleType="center"
+    android:background="@drawable/action_button_selector"
+/>
