@@ -25,14 +25,15 @@ public class FingerViewInflater {
   public void setupFingerView(final Context context) {
 
     Bitmap source = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
-    Bitmap bitmap = Bitmap.createBitmap(source.getWidth(), source.getHeight(), Bitmap.Config.RGB_565);
-    Matrix matrix = new Matrix();
-    matrix.postScale(-1.0f, 1.0f);
+    Bitmap bitmap = Bitmap.createBitmap(source.getWidth(), source.getHeight(), Bitmap.Config.ARGB_8888);
+
     Canvas canvas = new Canvas(bitmap);
     Paint paint = new Paint();
     paint.setAntiAlias(true);
     paint.setDither(true);
     paint.setFlags(Paint.FILTER_BITMAP_FLAG);
+    Matrix matrix = new Matrix();
+    matrix.postScale(-1.0f, 1.0f);
     canvas.drawBitmap(source, matrix, paint);
 
     final ImageView fingerView = new ImageView(context);

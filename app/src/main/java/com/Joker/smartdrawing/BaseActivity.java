@@ -27,7 +27,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     super.setContentView(layoutResID);
     getWindow().setBackgroundDrawable(null);
     ButterKnife.bind(BaseActivity.this);
-    BaseActivity.this.bindView();
+    BaseActivity.this.bindToolbar();
   }
 
   @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,8 +35,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     setContentView(getLayoutId());
   }
 
-  private void bindView() {
-    setSupportActionBar(toolbar);
+  private void bindToolbar() {
+    BaseActivity.this.setSupportActionBar(toolbar);
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) toolbar.setElevation(0.0f);
     BaseActivity.this.setupToolBar();
   }

@@ -57,13 +57,11 @@ public class DrawingActivity extends BaseActivity implements View.OnClickListene
 
   @Override public void onClick(View v) {
 
-    if (smartDrawingView.isDrawingCacheEnabled()) {
-      smartDrawingView.destroyDrawingCache();
-    }
-
     smartDrawingView.setDrawingCacheEnabled(true);
     Bitmap drawingCache = smartDrawingView.getDrawingCache();
 
     DrawingViewInflater.createdDrawingInflater(DrawingActivity.this).setDrawable(drawingCache);
+
+    if (smartDrawingView.isDrawingCacheEnabled()) smartDrawingView.destroyDrawingCache();
   }
 }

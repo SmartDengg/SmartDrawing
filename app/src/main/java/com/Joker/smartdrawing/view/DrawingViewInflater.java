@@ -20,7 +20,7 @@ public class DrawingViewInflater {
   private WindowManager windowManager;
   private WindowManager.LayoutParams layoutParams;
 
-  private SmartDrawableCardView.Callback listener = new SmartDrawableCardView.Callback() {
+  private SmartDrawableCardView.Callback callback = new SmartDrawableCardView.Callback() {
     @Override public void onCancel() {
       rootView.setCallback(null);
       if (rootView.getParent() != null) windowManager.removeViewImmediate(rootView);
@@ -35,32 +35,32 @@ public class DrawingViewInflater {
     return new DrawingViewInflater(context);
   }
 
-  public void setDrawable(@NonNull final Bitmap bitmap) {
+  public void setDrawable(@NonNull Bitmap sourceBitmap) {
 
-    Bitmap cacheBitmap = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+    final Bitmap cacheBitmap = Bitmap.createBitmap(sourceBitmap.getWidth(), sourceBitmap.getHeight(), Bitmap.Config.ARGB_8888);
     Canvas canvas = new Canvas(cacheBitmap);
     Paint paint = new Paint();
     paint.setAntiAlias(true);
     paint.setDither(true);
     paint.setFlags(Paint.FILTER_BITMAP_FLAG);
-    canvas.drawBitmap(bitmap, 0, 0, paint);
+    canvas.drawBitmap(sourceBitmap, 0, 0, paint);
 
     if (rootView == null) DrawingViewInflater.this.installRoot();
     if (windowManager == null) DrawingViewInflater.this.installWindowManager();
 
     windowManager.addView(rootView, layoutParams);
 
-    /*may cause memory leak*/
+    /*DEPRECATED but be care of memory leak*/
     rootView.post(new Runnable() {
       @Override public void run() {
-        rootView.setDrawingDrawable(bitmap);
+        rootView.setDrawingDrawable(cacheBitmap);
       }
     });
   }
 
   private void installRoot() {
     rootView = new SmartDrawableCardView(context);
-    rootView.setCallback(listener);
+    rootView.setCallback(callback);
   }
 
   private void installWindowManager() {

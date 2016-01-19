@@ -15,8 +15,8 @@
     </activity>
 
     <activity android:name=".DrawingActivity" android:screenOrientation="portrait"
-    android:theme="@style/AppTheme.DrawingStyle"
-    />
+        android:theme="@style/AppTheme.DrawingStyle"
+        />
   </application>
 
 </manifest>

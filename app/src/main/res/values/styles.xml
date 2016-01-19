@@ -14,6 +14,7 @@
 
   <style name="AppTheme.DrawingStyle">
     <item name="SmartDrawingViewStyle">@style/SmartViewStyle</item>
+    <item name="SmartDrawableCardViewStyle">@style/SmartDrawableCardViewStyle</item>
   </style>
 
   <style name="SmartViewStyle">
@@ -25,6 +26,13 @@
   <style name="DefaultSmartViewStyle">
     <item name="smart_finger_color">@color/colorPrimary</item>
     <item name="smart_stroke_width">@dimen/material_2dp</item>
+  </style>
+
+  <style name="SmartDrawableCardViewStyle">
+    <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+    <item name="contentPadding">0dp</item>
+    <item name="cardElevation">0dp</item>
+    <item name="cardBackgroundColor">@android:color/transparent</item>
   </style>
 
 </resources>

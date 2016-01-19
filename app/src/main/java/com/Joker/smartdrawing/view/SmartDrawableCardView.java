@@ -2,7 +2,6 @@ package com.Joker.smartdrawing.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.Color;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
@@ -23,34 +22,21 @@ public class SmartDrawableCardView extends CardView {
   private Callback callback;
 
   public SmartDrawableCardView(Context context) {
-    super(context);
-    if (!this.isInEditMode()) {
-      SmartDrawableCardView.this.init(context);
-    }
+    this(context, null);
   }
 
   public SmartDrawableCardView(Context context, AttributeSet attrs) {
-    super(context, attrs);
-    if (!this.isInEditMode()) {
-      SmartDrawableCardView.this.init(context);
-    }
+    this(context, attrs, R.attr.SmartDrawableCardViewStyle);
   }
 
   public SmartDrawableCardView(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     if (!this.isInEditMode()) {
-      SmartDrawableCardView.this.init(context);
+      SmartDrawableCardView.this.initView(context);
     }
   }
 
-  private void init(Context context) {
-
-    int _dp = context.getResources().getDimensionPixelOffset(R.dimen.material_8dp);
-
-    SmartDrawableCardView.this.setContentPadding(0, 0, 0, 0);
-    SmartDrawableCardView.this.setCardBackgroundColor(Color.parseColor("#E6E6E6"));
-    SmartDrawableCardView.this.setRadius(_dp);
-
+  private void initView(Context context) {
     LayoutInflater.from(context).inflate(R.layout.drawable_laout, SmartDrawableCardView.this, true);
   }
 
@@ -76,7 +62,7 @@ public class SmartDrawableCardView extends CardView {
 
   @Override public boolean dispatchKeyEvent(KeyEvent event) {
     int keyCode = event.getKeyCode();
-    if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+    if (keyCode == KeyEvent.KEYCODE_BACK && KeyEvent.ACTION_UP == event.getAction() && event.getRepeatCount() == 0) {
       if (callback != null) callback.onCancel();
     }
 

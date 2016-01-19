@@ -2,10 +2,12 @@
 <resources>
 
   <declare-styleable name="SmartDrawingView">
-    <attr name="smart_finger_color" format="color|reference"/>
-    <attr name="smart_stroke_width" format="dimension|reference"/>
+    <attr name="smart_finger_color" format="color"/>
+    <attr name="smart_stroke_width" format="dimension"/>
   </declare-styleable>
 
   <attr name="SmartDrawingViewStyle" format="reference"/>
+
+  <attr name="SmartDrawableCardViewStyle" format="reference"/>
 
 </resources>
