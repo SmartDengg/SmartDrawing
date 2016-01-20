@@ -1,15 +1,18 @@
 package com.Joker.smartdrawing;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageButton;
 import butterknife.OnClick;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
   private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -25,6 +28,7 @@ public class MainActivity extends BaseActivity {
 
     AppCompatImageButton actionView = (AppCompatImageButton) menuItem.getActionView();
 
+    actionView.setOnClickListener(MainActivity.this);
     MainActivity.this.bindActionDrawable(actionView, R.drawable.ic_github_icon2);
     MainActivity.this.polishDrawable(actionView.getDrawable(), android.R.color.white);
 
@@ -58,5 +62,17 @@ public class MainActivity extends BaseActivity {
 
   @Override protected void exit() {
     MainActivity.this.finish();
+  }
+
+  @Override public void onClick(View v) {
+
+     /*thanks for helping,http://www.jianshu.com/p/eaae783b931f*/
+    Intent intent = new Intent();
+    intent.setAction(Intent.ACTION_VIEW);
+    Uri content_url = Uri.parse("https://github.com/SmartDengg/SmartDrawing");
+    intent.setData(content_url);
+    if (intent.resolveActivity(getPackageManager()) != null) {
+      MainActivity.this.startActivity(intent);
+    }
   }
 }
