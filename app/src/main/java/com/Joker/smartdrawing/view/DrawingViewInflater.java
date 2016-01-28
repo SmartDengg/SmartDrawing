@@ -37,13 +37,16 @@ public class DrawingViewInflater {
 
   public void setDrawable(@NonNull Bitmap sourceBitmap) {
 
-    final Bitmap cacheBitmap = Bitmap.createBitmap(sourceBitmap.getWidth(), sourceBitmap.getHeight(), Bitmap.Config.ARGB_8888);
+    final Bitmap cacheBitmap =
+        Bitmap.createBitmap(sourceBitmap.getWidth(), sourceBitmap.getHeight(), Bitmap.Config.RGB_565);
     Canvas canvas = new Canvas(cacheBitmap);
     Paint paint = new Paint();
     paint.setAntiAlias(true);
     paint.setDither(true);
     paint.setFlags(Paint.FILTER_BITMAP_FLAG);
     canvas.drawBitmap(sourceBitmap, 0, 0, paint);
+
+    sourceBitmap.recycle();
 
     if (rootView == null) DrawingViewInflater.this.installRoot();
     if (windowManager == null) DrawingViewInflater.this.installWindowManager();
