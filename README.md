@@ -1,13 +1,13 @@
 #SmartDrawing
 
-**Sketch**
+**简介**
 -----------------
 
 ![](http://upload-images.jianshu.io/upload_images/268450-af063affb00ab45c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 一个轻量级的手绘板，加入了一点截图功能。这只是一个Demo。并不能作为类库，也不是完整的项目工程，仅供学习或参考使用。
 
-**Feature**
+**特性**
 -----------------
 
 你可以从这里get以下几个知识点：
@@ -19,12 +19,12 @@
 3. 一些其它技巧或细节的处理的与运用
 
 
-**ScreenShot**
+**GIF**
 -----------------
 
 ![](http://upload-images.jianshu.io/upload_images/268450-b8ddb4f040175486.gif?imageMogr2/auto-orient/strip)
 
-**Developed By**
+**关于开发者**
 -----------------
 
 - 小鄧子 - Hi4Joker@gmail.com
@@ -41,7 +41,7 @@
   <img alt="Follow me on Wechat" src="http://upload-images.jianshu.io/upload_images/268450-1025666a7a10ec97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" />
 </a>
 
-**Acknowledge**
+**参考**
 -----------------
 
 [CodePath Android Cliffnotes](https://guides.codepath.com/android) - Codepath
