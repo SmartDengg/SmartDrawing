@@ -48,11 +48,9 @@ public class FingerViewInflater {
 
     fingerView.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
       @Override public boolean onPreDraw() {
-
         fingerView.getViewTreeObserver().removeOnPreDrawListener(this);
         fingerView.setTranslationX(Utils.getScreenWidth(context) - Utils.getActionBarSize(context));
         fingerView.setTranslationY(Utils.getActionBarSize(context) / 2);
-
         return true;
       }
     });

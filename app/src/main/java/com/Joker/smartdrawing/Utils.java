@@ -21,9 +21,6 @@ public class Utils {
 
   /**
    * Toolbar的 NavButton
-   *
-   * @param toolbar
-   * @return
    */
   public static ImageButton getNavButtonView(@NonNull Toolbar toolbar) {
     try {
@@ -42,19 +39,19 @@ public class Utils {
 
   /**
    * Toolbar的 NavButton 的高度
-   *
-   * @param context
-   * @return
    */
   public static int getActionBarSize(Context context) {
 
     if (actionBarSize == 0) {
       TypedArray actionbarSizeTypedArray = null;
       try {
-        actionbarSizeTypedArray = context.obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
+        actionbarSizeTypedArray =
+            context.obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
         actionBarSize = (int) actionbarSizeTypedArray.getDimension(0, 0);
       } finally {
-        actionbarSizeTypedArray.recycle();
+        if (actionbarSizeTypedArray != null) {
+          actionbarSizeTypedArray.recycle();
+        }
       }
     }
 

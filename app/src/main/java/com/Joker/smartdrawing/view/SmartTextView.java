@@ -26,7 +26,6 @@ public class SmartTextView extends TextView {
   }
 
   private void init(Context context) {
-
     Typeface typeface = Typeface.createFromAsset(context.getAssets(), "Lobster-Regular.ttf");
     this.setTypeface(typeface);
   }
